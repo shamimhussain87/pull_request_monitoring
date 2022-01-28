@@ -30,7 +30,7 @@ if date!=None:
 
 # First create a Github instance:
 # using an access token
-g = Github("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")
+g = Github("ghp_hhhAOpby980mhTSamQFsLmLUhRSr0PDF73QwiKi4d")
 try:
       g.get_user(username) == True
       # print("user exists")
