@@ -2,8 +2,10 @@ import datetime
 from github import Github
 import sys
 
-username = sys.argv[1]
-total_prs = sys.argv[2]
+username = os.getenv('USER_NAME')
+USER_NAME= username.lower()
+total_prs = os.getenv('TOTAL_PRS')
+TOTAL_PRS= total_prs.lower()
 try:
       total_prs = int(total_prs)
 except:
