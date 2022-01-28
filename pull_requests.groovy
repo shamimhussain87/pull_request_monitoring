@@ -12,16 +12,16 @@ pipeline {
     }
 
     parameters {
-        string(name: 'APPNAME', description: 'Application name')
-        string(name: 'TEAM_NAME', description: 'Team name')
+        string(name: 'USERNAME', description: 'Github username')
+        string(name: 'TOTAL_PRS', description: 'No of pull request in integer')
         string(name: 'APP_TEMPLATE_BRANCH', defaultValue: 'main', description: 'Branch for github.com/motain/paas-go-service-template')
     }
 
     stages {
-        stage('Set build name') {
+        stage('Set username of github user') {
             steps {
                 script {
-                    currentBuild.displayName = "#${BUILD_NUMBER}: ${APPNAME}"
+                    currentBuild.displayName = "#${shamimhussain87}: ${APPNAME}"
                 }
             }
         }
